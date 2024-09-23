@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego</title>
+    <style>
+        body, html {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+
+    #gameCanvas {
+        display: block;
+        background-color: transparent;
+    }
+
+        #startButton, #restartButton, #victoryMessage {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 10px 20px;
+            font-size: 20px;
+            background-color: #03588C;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #startButton:active, #restartButton:active {
+            background-color: #6BE5F2;
+        }
+
+        #restartButton, #victoryMessage {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="gameCanvas"></canvas>
+    <button id="startButton">Iniciar Juego</button>
+    <button id="restartButton" onclick="reiniciarJuego()">Reiniciar</button>
+    <div id="victoryMessage">
+        <p>¡Has ganado!</p>
+        <button onclick="reiniciarJuego()">Reiniciar</button>
+    </div>
+    <script src="main.js"></script>
+    <script src="boss.js"></script>
+</body>
+</html>
