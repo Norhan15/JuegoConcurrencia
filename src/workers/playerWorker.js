@@ -12,6 +12,7 @@ onmessage = function (e) {
     } else {
         frameIndex = 0;
     }
+    
 
     postMessage({ frameIndex });
 };

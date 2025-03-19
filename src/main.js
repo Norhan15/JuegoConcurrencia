@@ -51,7 +51,7 @@ const spriteWidth = 50;
 const spriteHeight = 80;
 let frameIndex = 0;
 let frameCounter = 0;
-const frameSpeed = 5; // Ajusta este valor para cambiar la velocidad de la animación
+const frameSpeed = 5;
 
 function drawPlayer() {
     ctx.clearRect(player.x, player.y, player.width, player.height);
@@ -114,6 +114,7 @@ function drawPlatforms() {
         });
     }
 }
+
 
 
 document.addEventListener("keydown", (e) => {
